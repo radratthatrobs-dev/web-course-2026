@@ -1,0 +1,141 @@
+/* ---------- Глобально ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #222;
+  background: #f0f0f0;
+  padding: 20px;
+}
+
+/* ---------- Навигация ---------- */
+.nav {
+  display: flex;              /* flex */
+  justify-content: center;    /* свойство 1 */
+  align-items: center;        /* свойство 2 */
+  flex-wrap: wrap;            /* свойство 3 */
+  gap: 20px;                  /* свойство 4 */
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.nav a {
+  color: #0055cc;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Шапка ---------- */
+.header {
+  display: flex;              /* flex */
+  flex-direction: row;        /* свойство 5 */
+  align-items: center;        /* align-items */
+  flex-wrap: wrap;            /* flex-wrap */
+  gap: 20px;
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.header-info h1 {
+  font-size: 28px;
+}
+
+.position {
+  color: #0055cc;
+  font-weight: bold;
+}
+
+.slogan {
+  color: #555;
+  font-style: italic;
+}
+
+/* ---------- Секции ---------- */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section {
+  padding: 20px;
+  background: #fff;
+}
+
+.section h2 {
+  margin-bottom: 10px;
+}
+
+/* ---------- Образование ---------- */
+.education-list {
+  padding-left: 20px;
+}
+
+.education-list li {
+  margin-bottom: 8px;
+}
+
+.years {
+  color: #666;
+  font-size: 14px;
+}
+
+/* ---------- Навыки ---------- */
+.skills-list {
+  display: flex;              /* flex */
+  flex-wrap: wrap;            /* flex-wrap */
+  gap: 10px;                  /* gap */
+}
+
+.skill {
+  padding: 5px 14px;
+  background: #dbe4ff;
+  color: #1a3a8f;
+  border-radius: 999px;       /* «пилюля» */
+  font-size: 14px;
+}
+
+/* ---------- Контакты ---------- */
+.footer {
+  margin-top: 20px;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+.footer h2 {
+  margin-bottom: 10px;
+}
+
+.contacts-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.contacts-list a {
+  color: #8ab4ff;
+  text-decoration: none;
+}
+
+.contacts-list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
