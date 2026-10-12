@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерактивный список задач (Todo-list)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="todo-container">
+        <h1>Мой список задач</h1>
+        
+        <!-- Поле ввода и кнопка добавления -->
+        <div class="todo-form">
+            <input type="text" id="task-input" placeholder="Что нужно сделать?">
+            <button id="add-btn">Добавить</button>
+        </div>
+
+        <!-- Кнопки фильтрации -->
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">Все</button>
+            <button class="filter-btn" data-filter="active">Активные</button>
+            <button class="filter-btn" data-filter="completed">Завершённые</button>
+        </div>
+
+        <!-- Контейнер для списка задач (генерируется через JS) -->
+        <ul id="task-list"></ul>
+
+        <!-- Счетчик задач -->
+        <div class="todo-counter">
+            <span id="counter-active">Осталось: 0</span>, 
+            <span id="counter-completed">Выполнено: 0</span>
+        </div>
+    </div>
+</body>
+</html>
