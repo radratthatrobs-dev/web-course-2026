@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimal Agency — Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">STUDIO.</div>
+            
+            <!-- Мобильное гамбургер-меню (без JS) -->
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li><a href="#hero" class="nav__link">Главная</a></li>
+                    <li><a href="#services" class="nav__link">Услуги</a></li>
+                    <li><a href="#works" class="nav__link">Проекты</a></li>
+                    <li><a href="#contact" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Герой-секция (Minimal Hero) -->
+        <section id="hero" class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <span class="hero__subtitle">Digital Agency</span>
+                    <h1 class="hero__title">Создаем чистый цифровой опыт.</h1>
+                    <p class="hero__desc">Минималистичный дизайн, продуманная архитектура и высокая производительность для вашего бренда.</p>
+                    <a href="#contact" class="btn btn--primary">Обсудить проект</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция услуг (Grid) -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Что мы делаем</h2>
+                </div>
+                <div class="services__grid">
+                    <article class="card">
+                        <span class="card__num">01</span>
+                        <h3 class="card__title">UI/UX Дизайн</h3>
+                        <p class="card__text">Проектирование пользовательских интерфейсов с фокусом на эстетику и функциональность.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__num">02</span>
+                        <h3 class="card__title">Веб-разработка</h3>
+                        <p class="card__text">Чистый код, адаптивность под любые устройства и быстрая загрузка страниц.</p>
+                    </article>
+                    <article class="card">
+                        <span class="card__num">03</span>
+                        <h3 class="card__title">Брендинг</h3>
+                        <p class="card__text">Разработка айдентики, логотипов и гайдлайнов для современных компаний.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция проектов (Grid портфолио) -->
+        <section id="works" class="works">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Избранные работы</h2>
+                </div>
+                <div class="works__grid">
+                    <div class="work-item">
+                        <div class="work-placeholder">Проект А</div>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-placeholder">Проект Б</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция контактов / Форма обратной связи -->
+        <section id="contact" class="contact">
+            <div class="container contact__container">
+                <div class="contact__info">
+                    <h2 class="section-title">Давайте создадим что-то уникальное вместе.</h2>
+                    <p class="contact__text">Напишите нам, и мы ответим в течение часа.</p>
+                </div>
+                <form class="form">
+                    <div class="form__group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@domain.com" required>
+                    </div>
+                    <div class="form__group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Расскажите о вашей задаче..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="logo">STUDIO.</div>
+            <p>&copy; 2026 Minimal Agency. Все права защищены.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
