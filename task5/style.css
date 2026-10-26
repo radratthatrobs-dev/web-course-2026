@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #282c34;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.simon-container {
+    background: #3a3f4b;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 360px;
+    width: 100%;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.game-info {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.status-message {
+    font-size: 0.95rem;
+    color: #a0aec0;
+    margin-bottom: 20px;
+    min-height: 24px;
+}
+
+/* Сетка 2х2 для 4 секторов */
+.board {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.tile {
+    width: 120px;
+    height: 120px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.15s ease, transform 0.1s ease;
+}
+
+.tile:active {
+    transform: scale(0.96);
+}
+
+/* Цвета секторов */
+.tile-0 { background-color: #e53e3e; } /* Красный */
+.tile-1 { background-color: #3182ce; } /* Синий */
+.tile-2 { background-color: #d69e2e; } /* Желтый */
+.tile-3 { background-color: #38a169; } /* Зеленый */
+
+/* Класс подсветки при воспроизведении или клике */
+.tile.active {
+    opacity: 1;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.04);
+}
+
+.start-btn {
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    min-height: 44px;
+    min-width: 120px;
+}
+
+.start-btn:hover {
+    background-color: #718096;
+}
+
+.start-btn:disabled {
+    background-color: #2d3748;
+    color: #718096;
+    cursor: not-allowed;
+}

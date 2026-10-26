@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px;
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.game-rules {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.game-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.game-controls input {
+    flex: 1;
+    min-height: 44px;
+    padding: 0 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.game-controls input:focus {
+    border-color: #0066cc;
+}
+
+.game-controls button {
+    min-height: 44px;
+    padding: 0 16px;
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.game-controls button:hover {
+    background-color: #004999;
+}
+
+#restart-btn {
+    background-color: #6c757d;
+}
+
+#restart-btn:hover {
+    background-color: #5a6268;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    min-height: 18px;
+}
+
+.win-message {
+    color: #28a745;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.counter {
+    font-size: 0.95rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    color: #444;
+}
+
+.history-section h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#history-list {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 8px;
+    background: #fafafa;
+}
+
+.history-item {
+    padding: 6px 8px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}

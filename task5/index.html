@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра Simon</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="simon-container">
+        <h1>Игра Simon</h1>
+        <div class="game-info">
+            Уровень: <span id="level-display">0</span>
+        </div>
+        <div class="status-message" id="status-message">Нажмите «Старт», чтобы начать</div>
+
+        <!-- Игровое поле: 4 цветные кнопки -->
+        <div class="board">
+            <button class="tile tile-0" data-index="0"></button>
+            <button class="tile tile-1" data-index="1"></button>
+            <button class="tile tile-2" data-index="2"></button>
+            <button class="tile tile-3" data-index="3"></button>
+        </div>
+
+        <!-- Кнопка управления -->
+        <button id="start-btn" class="start-btn">Старт</button>
+    </div>
+</body>
+</html>
