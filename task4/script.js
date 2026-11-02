@@ -38,22 +38,22 @@ function generateSecretNumber() {
         digits[nonZeroIndex] = temp;
     }
     // Возвращаем первые 4 цифры в виде массива
-    return digits.slice(0, 4);
+    return digits.slice(0, 6);
 }
 
 /**
  * 2. Функция валидации ввода игрока
  */
 function validateInput(inputStr) {
-    if (inputStr.length !== 4) {
-        return "Введите ровно 4 цифры.";
+    if (inputStr.length !== 6) {
+        return "Введите ровно 6 цифры.";
     }
-    if (!/^\d{4}$/.test(inputStr)) {
+    if (!/^\d{6}$/.test(inputStr)) {
         return "Разрешены только цифры.";
     }
     // Проверка на уникальность цифр
     let uniqueSet = new Set(inputStr);
-    if (uniqueSet.size !== 4) {
+    if (uniqueSet.size !== 6) {
         return "Цифры не должны повторяться.";
     }
     return null; // Ошибок нет
@@ -66,7 +66,7 @@ function countBullsAndCows(secret, guessArray) {
     let bulls = 0;
     let cows = 0;
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 6; i++) {
         if (guessArray[i] === secret[i]) {
             bulls++;
         } else if (secret.includes(guessArray[i])) {
@@ -106,9 +106,9 @@ function handleCheckGuess() {
     render();
 
     // Проверка на победу
-    if (bulls === 4) {
+    if (cows >= 3) {
         isGameOver = true;
-        winMessage.textContent = `Победа! Угадано за ${attemptsHistory.length} попыток.`;
+        winMessage.textContent = `Победа! число ${secretDigits} угадано за ${attemptsHistory.length} попыток.`;
         userInput.disabled = true;
         checkBtn.disabled = true;
     }

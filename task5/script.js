@@ -116,7 +116,7 @@ function handlePlayerTurn(selectedIndex) {
     const currentIndex = playerSequence.length - 1;
 
     // Проверка правильности нажатия на каждом шаге
-    if (playerSequence[currentIndex] !== sequence[currentIndex]) {
+    if (playerSequence[currentIndex] === sequence[currentIndex]) {
         gameOver();
         return;
     }

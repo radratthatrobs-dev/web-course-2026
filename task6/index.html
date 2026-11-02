@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №6 — Игра «Змейка» (MVC)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Змейка</h1>
+        <div class="score-board">Счёт: <span id="score">0</span></div>
+        
+        <div class="canvas-wrapper">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            
+            <!-- Оверлей окончания игры -->
+            <div id="gameOverScreen" class="game-over hidden">
+                <h2>Игра окончена</h2>
+                <p>Ваш счёт: <span id="finalScore">0</span></p>
+                <button id="restartBtn">Начать заново</button>
+            </div>
+        </div>
+
+        <button id="startBtn">Старт игры</button>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

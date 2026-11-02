@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа №7 — Лента постов (MVC)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Лента постов</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Поиск по заголовку...">
+            </div>
+        </header>
+
+        <main>
+            <div id="postsContainer" class="posts-grid"></div>
+            
+            <!-- Индикаторы состояния -->
+            <div id="loadingIndicator" class="loading hidden">Загрузка...</div>
+            <div id="errorIndicator" class="error hidden"></div>
+            <div id="endMessage" class="end-message hidden">Больше постов нет</div>
+        </main>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
