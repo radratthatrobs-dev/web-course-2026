@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen-Money — Учёт финансов</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <h1>Zen-Money</h1>
+
+        <!-- Сводка баланса -->
+        <div id="summaryCard" class="summary-card">
+            <div>Доходы: <span id="totalIncome" class="income">0.00 ₽</span></div>
+            <div>Расходы: <span id="totalExpense" class="expense">0.00 ₽</span></div>
+            <div>Баланс: <span id="balance">0.00 ₽</span></div>
+        </div>
+
+        <!-- Форма добавления / редактирования операции -->
+        <form id="transactionForm" class="card form-card">
+            <h2 id="formTitle">Новая операция</h2>
+            <div class="form-group">
+                <label for="amountInput">Сумма:</label>
+                <input type="number" id="amountInput" step="0.01" min="0.01" required placeholder="0.00">
+            </div>
+            <div class="form-group">
+                <label for="categorySelect">Категория:</label>
+                <select id="categorySelect" required></select>
+            </div>
+            <div class="form-group">
+                <label for="typeSelect">Тип операции (определяется категорией):</label>
+                <select id="typeSelect" disabled>
+                    <option value="expense">Расход</option>
+                    <option value="income">Доход</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="dateInput">Дата:</label>
+                <input type="date" id="dateInput" required>
+            </div>
+            <div class="form-group">
+                <label for="commentInput">Комментарий:</label>
+                <input type="text" id="commentInput" placeholder="Описание...">
+            </div>
+            <div class="form-actions">
+                <button type="submit" id="submitBtn" class="btn btn-primary">Добавить операцию</button>
+                <button type="button" id="cancelEditBtn" class="btn btn-secondary hidden">Отмена</button>
+            </div>
+        </form>
+
+        <!-- Форма создания категории -->
+        <form id="categoryForm" class="card form-card">
+            <h2>Новая категория</h2>
+            <div class="form-group">
+                <label for="catNameInput">Название категории:</label>
+                <input type="text" id="catNameInput" required placeholder="Например: Развлечения">
+            </div>
+            <div class="form-group">
+                <label for="catTypeSelect">Тип категории:</label>
+                <select id="catTypeSelect">
+                    <option value="expense">Расход</option>
+                    <option value="income">Доход</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-secondary">Создать категорию</button>
+        </form>
+
+        <!-- Блок фильтров -->
+        <div class="card filter-card">
+            <h3>Фильтры</h3>
+            <div class="filter-row">
+                <select id="filterType">
+                    <option value="">Все типы</option>
+                    <option value="income">Только доходы</option>
+                    <option value="expense">Только расходы</option>
+                </select>
+                <select id="filterCategory">
+                    <option value="">Все категории</option>
+                </select>
+                <input type="date" id="filterFrom" title="Дата с">
+                <input type="date" id="filterTo" title="Дата по">
+                <button type="button" id="resetFiltersBtn" class="btn btn-secondary">Сбросить</button>
+            </div>
+        </div>
+
+        <!-- Список операций -->
+        <div class="card">
+            <h2>История операций</h2>
+            <ul id="transactionsList" class="transactions-list"></ul>
+        </div>
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
